@@ -10,14 +10,15 @@
 
 // An object is an instance of a class, representing a specific entity in the program.
 
+
 class MyInt {
 private:
     int* ptr;  // Member variable
 
 public:
     // Parametrized constructor
-    MyInt(int num) {
-        ptr = new int(num);  // Dynamically allocate memory for the integer
+    MyInt(int num) : ptr(new int(num)) {
+        // ptr = new int(num);  // Dynamically allocate memory for the integer
     }
 
     // Destructor
@@ -26,8 +27,8 @@ public:
     }
 
     // Copy constructor
-    MyInt(const MyInt& other) {
-        ptr = new int(*other.ptr);  // Perform deep copy of the integer
+    MyInt(const MyInt& other) : ptr(new int(*other.ptr)) {
+        //  ptr = new int(*other.ptr);  // Perform deep copy of the integer
     }
 
     // Assignment operator
@@ -36,10 +37,13 @@ public:
             return *this;  // Check for self-assignment
         }
 
-        *ptr = *rhs.ptr;  // Perform deep copy of the integer
+        delete ptr;  // Deallocate existing memory
+
+        ptr = new int(*rhs.ptr);  // Perform deep copy of the integer
 
         return *this;
     }
+
 
     // Setter
     void setValue(int value) {
