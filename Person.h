@@ -22,10 +22,14 @@ public:
     // Constructor (overloaded)
     // Initializes a Person object with the provided name and age
     Person(const std::string& name, int age);
-
-// Copy constructor
+// Assignment operator
+    Person& operator=(const Person& other);
+    // Copy constructor
 // Performs a shallow copy of the Person object
     Person(const Person& other);
+// Move assignment operator
+    Person& operator=(Person&& other);
+
 
     // Move constructor
     // Moves the data from another Person object, leaving it in a valid but unspecified state

@@ -26,6 +26,30 @@ Person::Person(const Person& other) : name(other.name), age(other.age) {
     std::cout << "Copy constructor called." << std::endl;
 }
 
+// Assignment operator
+Person& Person::operator=(const Person& other) {
+    if (this == &other) {
+        return *this;  // Check for self-assignment
+    }
+
+    name = other.name;  // Perform a shallow copy of the name
+    age = other.age;  // Perform a copy of the age
+
+    return *this;
+}
+
+// Move assignment operator
+Person& Person::operator=(Person&& other) {
+    if (this == &other) {
+        return *this;  // Check for self-assignment
+    }
+
+    name = std::move(other.name); // Transfer ownership of the name using std::move
+    age = other.age;  // Perform a copy of the age
+
+    return *this;
+}
+
 
 // Move constructor
 // Moves the data from another Person object, leaving it in a valid but unspecified state
