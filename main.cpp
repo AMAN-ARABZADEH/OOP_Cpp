@@ -1,6 +1,11 @@
 #include "Person.h"
 #include "BankAccount.h"
 // OOP - Object-Oriented Programming
+/*
+ * Auther: Aman Arabzadeh
+ * Date: 2023-07-08
+ *  Examples and explanations of OOP - Object-Oriented Programming in C++ for Beginners
+ */
 // Object-Oriented Programming (OOP) is a programming paradigm that organizes code into objects, which are instances of classes.
 // It promotes the concept of encapsulation, inheritance, and polymorphism, allowing for modular and reusable code.
 
