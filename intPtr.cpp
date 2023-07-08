@@ -14,7 +14,7 @@ IntPtr::~IntPtr() {
 }
 
 // Copy constructor
-IntPtr::IntPtr(const IntPtr& other) : ptr(new int(*other.ptr)) {}
+IntPtr::IntPtr(const IntPtr& other) : IntPtr{*other.ptr}{}
 
 // Assignment operator
 IntPtr& IntPtr::operator=(const IntPtr& rhs) {
