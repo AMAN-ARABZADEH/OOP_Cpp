@@ -2,6 +2,7 @@
 #include "BankAccount.h"
 #include "Employee.h"
 #include "intPtr.h"
+#include "Player.h"
 // OOP - Object-Oriented Programming
 /*
  * Auther: Aman Arabzadeh
@@ -94,6 +95,10 @@ int main() {
     // Promote employee 1 by 10%
     emp1.promote(10.0);
     std::cout << "Employee 1 (after promotion): " << emp1 << std::endl;
+
+    // Player class
+    Player player("John", 5, 80);
+    std::cout << player << std::endl;
 
     return 0;
 }
