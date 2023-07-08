@@ -99,6 +99,27 @@ int main() {
     // Player class
     Player player("John", 5, 80);
     std::cout << player << std::endl;
+    // Create a player object using the default constructor
+    Player player1;
+    player1.setName("John");
+    player1.setLevel(5);
+    player1.setHealth(100);
+
+    // Display player information using the overloaded operator <<
+    std::cout << player1 << std::endl;
+
+    // Create a player object using the parameterized constructor
+    Player player2("Alice", 3, 75);
+
+    // Display player information using the overloaded operator <<
+    std::cout << player2 << std::endl;
+
+    // Update player information
+    player2.takeDamage(25);
+    player2.levelUp();
+
+    // Display updated player information
+    std::cout << player2 << std::endl;
 
     return 0;
 }
