@@ -1,7 +1,7 @@
 # Object-Oriented Programming Examples
 OOP - Object-Oriented Programming in C++ for beginners
 
-This repository contains three examples of object-oriented programming implemented in C++: `Person`, `BankAccount`, and `MyInt`.
+This repository contains four examples of object-oriented programming implemented in C++: `Person`, `BankAccount`, `IntPtr`, and `Employee`.
 
 ## Object-Oriented Programming (OOP)
 
@@ -10,7 +10,7 @@ It allows for the encapsulation of data and behavior into reusable and modular u
 OOP promotes concepts such as abstraction, inheritance, polymorphism, and encapsulation.
 
 Please note that while these examples demonstrate the fundamentals of OOP, they do not cover all aspects of the paradigm. 
-Concepts such as encapsulation, inheritance, and polymorphism will be explored in future examples.
+Concepts such as encapsulation, inheritance, polymorphism, and more will be explored in future examples.
 
 ## Classes and Objects
 
@@ -31,17 +31,23 @@ The `BankAccount` class represents a bank account with an account number, owner 
 It demonstrates the concepts of encapsulation, accessor methods (getters), mutator methods (deposit and withdraw), and operator overloading (<< and >>). 
 The `BankAccount` class shows how to model a real-world entity with data and behavior.
 
-## Example 3: MyInt Class
+## Example 3: IntPtr Class
 
-The `MyInt` class is a simple implementation of an integer wrapper. 
+The `IntPtr` class is a simple implementation of an integer wrapper. 
 It dynamically allocates memory to store an integer and provides functionalities for setting and getting its value. 
 It showcases the concepts of dynamic memory allocation, copy constructor, destructor, and operator overloading (assignment operator). 
-The `MyInt` class illustrates how to manage resources within a class.
+The `IntPtr` class illustrates how to manage resources within a class.
+
+## Example 4: Employee Class
+
+The `Employee` class represents an employee with a name, age, and salary. 
+It demonstrates the concepts of encapsulation, constructor overloading, getter and setter methods, operator overloading (==, !=, <<, and >>), and member functions. 
+The `Employee` class provides an example of modeling an entity with attributes and behavior specific to employees.
 
 ## Operator Overloading
 
 Operator overloading allows the customization of operators' behavior for user-defined types. 
-In the provided examples, the << and >> operators are overloaded to enable input and output of `Person` and `BankAccount` objects.
+In the provided examples, the << and >> operators are overloaded to enable input and output of `Person`, `BankAccount`, and `Employee` objects.
 
 ## Resources
 
@@ -53,5 +59,3 @@ If you want to learn more about object-oriented programming in C++ and deepen yo
 - [Wikipedia - Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming)
 
 Feel free to explore the code and experiment with the examples to understand the principles and benefits of object-oriented programming.
-
-
