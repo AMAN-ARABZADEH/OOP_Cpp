@@ -1,5 +1,7 @@
 #include "Person.h"
 #include "BankAccount.h"
+#include "Employee.h"
+#include "intPtr.h"
 // OOP - Object-Oriented Programming
 /*
  * Auther: Aman Arabzadeh
@@ -16,75 +18,27 @@
 // An object is an instance of a class, representing a specific entity in the program.
 
 
-class MyInt {
-private:
-    int* ptr;  // Member variable
-
-public:
-    // Parametrized constructor
-    MyInt(int num) : ptr(new int(num)) {
-        // ptr = new int(num);  // Dynamically allocate memory for the integer
-    }
-
-    // Destructor
-    ~MyInt() {
-        delete ptr;  // Deallocate the dynamically allocated memory
-    }
-
-    // Copy constructor
-    MyInt(const MyInt& other) : ptr(new int(*other.ptr)) {
-        //  ptr = new int(*other.ptr);  // Perform deep copy of the integer
-    }
-
-    // Assignment operator
-    MyInt& operator=(const MyInt& rhs) {
-        if (this == &rhs) {
-            return *this;  // Check for self-assignment
-        }
-
-        delete ptr;  // Deallocate existing memory
-
-        ptr = new int(*rhs.ptr);  // Perform deep copy of the integer
-
-        return *this;
-    }
-
-
-    // Setter
-    void setValue(int value) {
-        *ptr = value;  // Set the value of the integer
-    }
-
-    // Getter
-    int getValue() const {
-        return *ptr;  // Get the value of the integer
-    }
-};
-
-
 int main() {
     int a, b, c;
     std::cout << "Enter three integers: ";
     std::cin >> a >> b >> c;
 
-    // Create an object of MyInt by calling the constructor with 'a' as an argument
-    MyInt myValue(a);
+    // Create an object of IntPtr by calling the constructor with 'a' as an argument
+    IntPtr myValue(a);
     std::cout << "myValue: " << myValue.getValue() << std::endl;
 
     // Call setValue on the object with 'b' as an argument
     myValue.setValue(b);
     std::cout << "myValue after setValue: " << myValue.getValue() << std::endl;
 
-    // Create another object of MyInt by calling the constructor with 'c' as an argument
-    MyInt mValue2(c);
-    myValue = mValue2;  // Use the assignment operator to assign the value of the new MyInt to the old MyInt
+    // Create another object of IntPtr by calling the constructor with 'c' as an argument
+    IntPtr mValue2(c);
+    myValue = mValue2;  // Use the assignment operator to assign the value of the new IntPtr to the old IntPtr
 
-    // Call getValue on the *old* MyInt and print to cout, including a new line
+    // Call getValue on the *old* IntPtr and print to cout, including a new line
     std::cout << "myValue after assignment: " << myValue.getValue() << std::endl;
 
-
-    // Example 1: Person class
-    // Creating objects of the Person class
+    // Person class
     Person person1;  // Default constructor called
 
     // Using the introduce() method of the Person class
@@ -97,8 +51,7 @@ int main() {
     // Using the overloaded output stream operator to output the details of the person1 object
     std::cout << "person1 details: " << person1 << std::endl;
 
-    // Example 2: BankAccount class
-    // Creating an object of the BankAccount class
+    // BankAccount class
     BankAccount amans_account(12345, "Aman");
 
     // Depositing funds into the account
@@ -115,6 +68,32 @@ int main() {
     std::cout << "Owner's name: " << amans_account.getOwnerName() << std::endl;
     std::cout << "Current balance: " << amans_account.getBalance() << std::endl;
     std::cout << amans_account << std::endl;
+
+    // Employee class
+    Employee emp1;
+    Employee emp2;
+
+    // Input employee details using overloaded input operator
+    std::cout << "Enter details for Employee 1:" << std::endl;
+    std::cin >> emp1;
+
+    std::cout << "Enter details for Employee 2:" << std::endl;
+    std::cin >> emp2;
+
+    // Output employee details using overloaded output operator
+    std::cout << "Employee 1: " << emp1 << std::endl;
+    std::cout << "Employee 2: " << emp2 << std::endl;
+
+    // Using overloaded operators
+    if (emp1 == emp2) {
+        std::cout << "Both employees are the same." << std::endl;
+    } else {
+        std::cout << "Both employees are different." << std::endl;
+    }
+
+    // Promote employee 1 by 10%
+    emp1.promote(10.0);
+    std::cout << "Employee 1 (after promotion): " << emp1 << std::endl;
 
     return 0;
 }
