@@ -19,28 +19,23 @@ Person::Person(const std::string& name, int age) {
     std::cout << "Parameterized constructor called." << std::endl;
 }
 
+
 // Copy constructor
-// Performs a deep copy of the Person object
-Person::Person(const Person& other) {
-    name = other.name;
-    age = other.age;
+// Performs a shallow copy of the Person object
+Person::Person(const Person& other) : name(other.name), age(other.age) {
     std::cout << "Copy constructor called." << std::endl;
 }
 
+
 // Move constructor
 // Moves the data from another Person object, leaving it in a valid but unspecified state
-Person::Person(Person&& other) {
-    name = std::move(other.name);
-    age = other.age;
-    other.age = 0;
+Person::Person(Person&& other) : name(std::move(other.name)), age(other.age) {
+    other.name = nullptr;  // Set the source object's name pointer to null
     std::cout << "Move constructor called." << std::endl;
 }
 
-// Destructor
-// Cleans up resources and performs necessary cleanup for the Person object
-Person::~Person() {
-    std::cout << "Destructor called." << std::endl;
-}
+
+
 
 // Member function
 // Prints the name and age of the Person object

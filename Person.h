@@ -23,8 +23,8 @@ public:
     // Initializes a Person object with the provided name and age
     Person(const std::string& name, int age);
 
-    // Copy constructor
-    // Performs a deep copy of the Person object
+// Copy constructor
+// Performs a shallow copy of the Person object
     Person(const Person& other);
 
     // Move constructor
