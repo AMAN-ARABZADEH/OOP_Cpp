@@ -1,7 +1,7 @@
 # Object-Oriented Programming Examples
 OOP - Object-Oriented Programming in C++ for beginners
 
-This repository contains five examples of object-oriented programming implemented in C++: `Person`, `BankAccount`, `IntPtr`, `Employee`, and `Player`.
+In This repository I try to give five examples of object-oriented programming implemented in C++: `Person`, `BankAccount`, `IntPtr`, `Employee`, and `Player`.
 
 ## Object-Oriented Programming (OOP)
 
