@@ -1,7 +1,7 @@
 # Object-Oriented Programming Examples
 OOP - Object-Oriented Programming in C++ for beginners
 
-This repository contains four examples of object-oriented programming implemented in C++: `Person`, `BankAccount`, `IntPtr`, and `Employee`.
+This repository contains five examples of object-oriented programming implemented in C++: `Person`, `BankAccount`, `IntPtr`, `Employee`, and `Player`.
 
 ## Object-Oriented Programming (OOP)
 
@@ -44,10 +44,16 @@ The `Employee` class represents an employee with a name, age, and salary.
 It demonstrates the concepts of encapsulation, constructor overloading, getter and setter methods, operator overloading (==, !=, <<, and >>), and member functions. 
 The `Employee` class provides an example of modeling an entity with attributes and behavior specific to employees.
 
+## Example 5: Player Class
+
+The `Player` class represents a player in a game with a name, level, and health. 
+It demonstrates the concepts of encapsulation, member functions, and information display. 
+The `Player` class provides an example of modeling an entity with attributes and behavior specific to game players.
+
 ## Operator Overloading
 
 Operator overloading allows the customization of operators' behavior for user-defined types. 
-In the provided examples, the << and >> operators are overloaded to enable input and output of `Person`, `BankAccount`, and `Employee` objects.
+In the provided examples, the << and >> operators are overloaded to enable input and output of `Person`, `BankAccount`, `Employee`, and `Player` objects.
 
 ## Resources
 
