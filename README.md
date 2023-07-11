@@ -64,4 +64,9 @@ If you want to learn more about object-oriented programming in C++ and deepen yo
 - [GeeksforGeeks C++ Object-Oriented Programming](https://www.geeksforgeeks.org/object-oriented-programming-in-cpp/)
 - [Wikipedia - Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming)
 
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
 Feel free to explore the code and experiment with the examples to understand the principles and benefits of object-oriented programming.
